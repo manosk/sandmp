@@ -21,7 +21,7 @@ set(STANDARDS "-ansi -std=c++17")
 set(CMAKE_CXX_FLAGS "-O0 ${WARNINGS} ${STANDARDS}")
 
 include_directories( ./src/)
-set(SOURCE_FILES src/main.cpp src/ch2/basics.h src/ch2/basics.cpp)
+set(SOURCE_FILES src/main.cpp src/ch2/basics.h src/ch2/basics.cpp src/ch3/lock.cpp src/ch3/lock.h src/ch3/threadsafe_stack.h src/ch3/hierarchical_mutex.h src/ch3/lock_pair.h src/ch3/hierarchical_mutex.cpp src/ch3/readerwriter_mutex.cpp src/ch3/readerwriter_mutex.h src/ch3/lock_pair.cpp)
 add_executable(sandmp ${SOURCE_FILES})
 
 set_target_properties(
@@ -31,7 +31,7 @@ set_target_properties(
         COMPILE_FLAGS "${WARNING_FLAGS}"
 )
 
-target_link_libraries(sandmp -lfolly -lglog -larrow -lpthread -lboost_system -lboost_iostreams -lboost_filesystem)
+target_link_libraries(sandmp -lfolly -lglog -larrow -lpthread -lboost_system -lboost_iostreams -lboost_filesystem -lboost_thread)
 
 if(CLANG_TIDY_EXE)
     set_target_properties(
