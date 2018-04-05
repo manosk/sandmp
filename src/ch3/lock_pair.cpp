@@ -32,6 +32,7 @@ const some_object &ObjWrapper::getWrappedObj() const {
 const some_object &ObjWrapperB::getWrappedObj() const {
     return wrappedObj;
 }
+
 void swapB(ObjWrapperB& lhs, ObjWrapperB& rhs)
 {
     if(&lhs == &rhs)

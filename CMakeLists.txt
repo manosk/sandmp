@@ -21,7 +21,7 @@ set(STANDARDS "-ansi -std=c++17")
 set(CMAKE_CXX_FLAGS "-O0 ${WARNINGS} ${STANDARDS}")
 
 include_directories( ./src/)
-set(SOURCE_FILES src/main.cpp src/ch2/basics.h src/ch2/basics.cpp src/ch3/lock.cpp src/ch3/lock.h src/ch3/threadsafe_stack.h src/ch3/hierarchical_mutex.h src/ch3/lock_pair.h src/ch3/hierarchical_mutex.cpp src/ch3/readerwriter_mutex.cpp src/ch3/readerwriter_mutex.h src/ch3/lock_pair.cpp)
+set(SOURCE_FILES src/main.cpp src/ch2/basics.h src/ch2/basics.cpp src/ch3/lock.cpp src/ch3/lock.h src/ch3/threadsafe_stack.h src/ch3/hierarchical_mutex.h src/ch3/lock_pair.h src/ch3/hierarchical_mutex.cpp src/ch3/readerwriter_mutex.cpp src/ch3/readerwriter_mutex.h src/ch3/lock_pair.cpp src/ch4/sync.h src/ch4/threadsafe_queue.h src/ch4/double_buffer.cpp src/ch4/double_buffer.h src/ch4/sync.cpp src/ch4/threadsafe_queue.cpp src/ch4/quicksort.h src/ch5/spinlock.cpp src/ch5/spinlock.h src/ch4/quicksort.cpp src/ch4/promises.cpp src/ch4/promises.h src/ch6/queue.h src/ch6/concurrent.cpp src/ch6/concurrent.h src/ch6/lookup_table.h src/ch6/list.h)
 add_executable(sandmp ${SOURCE_FILES})
 
 set_target_properties(

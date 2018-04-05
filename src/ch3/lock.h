@@ -26,7 +26,7 @@
  * once_flag, call_once
  * (boost) shared_mutex
  *
- * recursive_mutex -> not recommended
+ * recursive_mutex -> not recommended (reason: invariants broken, and lock still succeeds)
  */
 
 void add_to_list(int new_value);
